@@ -5,8 +5,7 @@ phases:
         nodejs: 10
   build:
     commands:
-      - export BUCKET=poc-rajeev
-      - aws cloudformation package --template-file template.yml --s3-bucket $BUCKET --output-template-file outputtemplate.yml
+      - aws cloudformation package --template-file template.yml --s3-bucket poc-rajeev --output-template-file package.yml
 artifacts:
   type: zip
   files:
