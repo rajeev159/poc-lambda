@@ -1,17 +1,16 @@
-AWSTemplateFormatVersion : '2010-09-09'
+AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
-Description: A sample SAM     template for deploying Lambda functions.
-
+Description: POC Pipeline for CI CD
 Resources:
-  myLambdaFunction:
+  PocLambdaFunction:
     Type: AWS::Serverless::Function
     Properties:
       Handler: index.handler
       Runtime: nodejs10.x
-      Policies:
-        - Version: "2012-10-17"
-          Statement: 
-          - Effect: "Allow"
-            Action: 
-              - "lambda:InvokeFunction"
-            Resource: '*'
+      CodeUri: ./
+      Events:
+        MyTimeApi:
+          Type: Api
+          Properties:
+            Path: /TimeResource
+            Method: GET
