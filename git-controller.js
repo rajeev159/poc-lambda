@@ -41,6 +41,3 @@ const gitHubUrl = `https://${userName}:${password}@github.com/${userName}/${repo
           console.log('adding files failed'+failedAdd);
     });
 // Commit files as Initial Commit
- 
-// Finally push to online repository
- 
