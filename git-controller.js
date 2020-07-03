@@ -31,7 +31,7 @@ const gitHubUrl = `https://${userName}:${password}@github.com/${userName}/${repo
  simpleGitPromise.commit('Intial commit by simplegit')
    .then(
       (successCommit) => {
-        console.log(successCommit);
+        console.log('commited '+successCommit);
      }, (failed) => {
         console.log('failed commmit'+failed);
  });
